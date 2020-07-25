@@ -1,29 +1,28 @@
-***
-alfabet - a b c d e f g h ...
-kod - d e f g h i j k ...
-klucz: 3
+'''
+alphabet -a b c d e f g h ...
+code - d e f g h i j k ...
+key: 3
 
-tekst - baca
-szyfr - edfd
-***
+text - baca
+code - edfd
+'''
 
 import unittest
 import string
 
 
-#add to different file
-def cezar(napis: str, klucz: int) -> str:
-    alfabet.string.ascii_lowercase
-    kod = alfabet[klucz:] + alfabet[:klucz]
-    tabela = str.maketrans(alfabet,kod)
-    return napis.translate(tabela)
-
+# add to different file
+def cezar(text: str, key: int) -> str:
+    alphabet = string.ascii_lowercase
+    code = alphabet[key:] + alphabet[:key]
+    table = str.maketrans(alphabet, code)
+    return text.translate(table)
 
 
 class TestCezar(unittest.TestCase):
 
-    def test_kodowania (self):
-        self.assertEqual(cezar("baca", 3),'edfd')
-        
-    def test_odkodowania(self):
-        self.assertEqual(cezar("edfd",-3),"baca")
+    def test_coding(self):
+        self.assertEqual(cezar("baca", 3), 'edfd')
+
+    def test_uncoding(self):
+        self.assertEqual(cezar("edfd", -3), "baca")
