@@ -1,5 +1,5 @@
 import unittest
-from python.dev import cezar
+from cezar import cezar
 
 
 class TestCezar(unittest.TestCase):
